@@ -40,7 +40,7 @@ int Submenu2() {
 	cout << "2. Kiem tra so chinh phuong\n";
 	cout << "3. Kiem tra so hoan hao\n";
 	cout << "4. Thoat\n";
-	return 4;
+	return 10;
 }
 
 int SelectCommand(int Lenh)
@@ -82,7 +82,7 @@ int RunMainMenu(int Lenh)
 		{
 			lenh = SelectCommand(Submenu2());
 			check = RunSubMenu2(lenh);
-		} while (check != 4);
+		} while (check != 5);
 	}
 	else if (Lenh == 3)
 	{
