@@ -16,7 +16,7 @@ int Mainmenu() {
 	return 3;
 }
 
-int SubMmnu1() {
+int Submenu1() {
 	system("cls");
 	cout << "*********************\n";
 	cout << "CAC PHEP TINH CO BAN\n";
@@ -30,17 +30,17 @@ int SubMmnu1() {
 	return 5;
 }
 
-int SubMenu2() {
+int Submenu2() {
 	system("cls");
-	cout << "------------------" << endl;
-	cout << "MENU KIEM TRA SO" << endl;
-	cout << "------------------" << endl;
-	cout << "0. Quay tro ve menu chinh" << endl;
-	cout << "1. Kiem tra so nguyen to" << endl;
-	cout << "2. Kiem tra so chinh phuong" << endl;
-	cout << "3. Kiem tra so hoan hao" << endl;
-	cout << "4. Thoat" << endl;
-	return 10;
+	cout << "*********************\n";
+	cout << "KIEM TRA SO" << endl;
+	cout << "*********************\n";
+	cout << "0. Quay tro ve menu chinh\n";
+	cout << "1. Kiem tra so nguyen to\n";
+	cout << "2. Kiem tra so chinh phuong\n";
+	cout << "3. Kiem tra so hoan hao\n";
+	cout << "4. Thoat\n";
+	return 4;
 }
 
 int SelectCommand(int Lenh)
@@ -49,7 +49,7 @@ int SelectCommand(int Lenh)
 	int  n;
 	do
 	{
-		cout << "Chon xu li thu: ";
+		cout << "Choose your option: ";
 		cin >> n;
 		check = cin.fail();
 		if (check == true)
@@ -70,7 +70,7 @@ int RunMainMenu(int Lenh)
 		int check = 0;
 		do
 		{
-			lenh = SelectCommand(SubMenu1());
+			lenh = SelectCommand(Submenu1());
 			check = RunSubMenu1(lenh);
 		} while (check != 5);
 	}
@@ -80,9 +80,9 @@ int RunMainMenu(int Lenh)
 		int check = 0;
 		do
 		{
-			lenh = SelectCommand(SubMenu2());
+			lenh = SelectCommand(Submenu2());
 			check = RunSubMenu2(lenh);
-		} while (check != 5);
+		} while (check != 4);
 	}
 	else if (Lenh == 3)
 	{
