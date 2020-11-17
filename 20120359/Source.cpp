@@ -40,7 +40,7 @@ int Submenu2() {
 	cout << "2. Kiem tra so chinh phuong\n";
 	cout << "3. Kiem tra so hoan hao\n";
 	cout << "4. Thoat\n";
-	return 10;
+	return 4;
 }
 
 int SelectCommand(int Lenh)
@@ -100,7 +100,7 @@ int RunMainMenu(int Lenh)
 			}
 
 		} while (check);
-		if (c == 'y')
+		if (c == 'y' || c == 'Y')
 		{
 			return 3;
 		}
@@ -141,10 +141,12 @@ int RunSubMenu1(int Lenh) {
 		if (b == 0)
 		{
 			cout << "Error div/0" << endl;
+			system("pause");
 		}
 		else
 		{
 			cout << "Ket qua phep chia la: " << (a * 1.0) / b << endl;
+			system("pause");
 			break;
 		}
 	case 5:
@@ -161,7 +163,7 @@ int RunSubMenu1(int Lenh) {
 			}
 
 		} while (check == true);
-		if (c == 'y')
+		if (c == 'y' || c =='Y')
 		{
 			return 5;
 		}
@@ -212,7 +214,7 @@ int RunSubMenu2(int Lenh)
 			}
 
 		} while (check == true);
-		if (c == 'y')
+		if (c == 'y' || c == 'Y')
 		{
 			return 5;
 		}
